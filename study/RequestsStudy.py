@@ -43,7 +43,7 @@ print(requests.__cake__)
 
 # url = "https://contentcms-bj.cdn.bcebos.com/cmspic/bc7bfcbbdc9f43646903046238a87d2a.jpeg?x-bce-process=image/crop,x_0,y_0,w_636,h_346"
 # response = requests.get(url)
-# with open(f"static/test01.jpg","wb") as f:
+# with open(f"../static/test01.jpg","wb") as f:
 #     f.write(response.content)
 #
 # print("------------------------------05")

@@ -4,7 +4,7 @@ import time
 
 import requests
 
-with open(f"static/笔趣阁_神秘复苏.txt","w",encoding="utf-8") as f:
+with open(f"../static/笔趣阁_神秘复苏.txt","w",encoding="utf-8") as f:
     i = 7
     while i < 20:
         url = f"https://www.d3016ba0.icu/book/65055/{i}.html"
@@ -13,7 +13,7 @@ with open(f"static/笔趣阁_神秘复苏.txt","w",encoding="utf-8") as f:
         }
         response  = requests.get(url,headers=headers)
         # print(response.text)
-        print(response.status_code)
+        # print(response.status_code)
         pat = re.compile(r'<div[^>]*id="chaptercontent"[^>]*>(.*?)(?:请收藏本站：https://www.bqg78.com|</div>)', re.S)
         txt = re.sub(r'<br\s*/?>|\s*https?://[\w./]+', '', pat.search(response.text).group(1))
         txt = re.sub(r'\s+', ' ', txt).strip()

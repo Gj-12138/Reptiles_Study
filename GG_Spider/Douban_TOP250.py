@@ -6,7 +6,7 @@ import re
 import time
 
 import requests
-f=open(f"static/top250.txt",mode="w",encoding='utf-8')
+f=open(f"../static/top250.txt",mode="w",encoding='utf-8')
 page = 0
 for i in range(0,251,25):
     time.sleep(1)
