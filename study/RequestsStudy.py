@@ -104,7 +104,7 @@ session = requests.Session() #创建实例
 response = session.get(url2)
 csrfmiddlewaretoken = re.search(r'<input type="hidden" name="csrfmiddlewaretoken" value="(.*?)">',response.text).group(1)
 # 通过get获取csrfmiddlewaretoken
-response = requests.post(url2,data={'csrfmiddlewaretoken': csrfmiddlewaretoken,'username':"admin",'password':123456})
+response = session.post(url2,data={'csrfmiddlewaretoken': csrfmiddlewaretoken,'username':"admin",'password':123456})
 print(response.text)
 print("--------------------------------------------02")
 
