@@ -29,8 +29,9 @@ headers ={
     "authorization":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI5MTk1NDNjMTk1Njk0ZGM0YjFiNWZhOTg2YWE2MzY0MiIsIm5hbWVpZCI6IjMxMjYzNDAiLCJJZCI6IjMxMjYzNDAiLCJ1bmlxdWVfbmFtZSI6IkdK5qGA5qGA5qGAIiwiTmFtZSI6IkdK5qGA5qGA5qGAIiwidmVyc2lvbiI6IkJnWiIsIm5iZiI6MTc2MTcwODc3NiwiZXhwIjoxNzYyNTcyNzc2LCJpc3MiOiJ5b3VwaW44OTguY29tIiwiZGV2aWNlSWQiOiI2MjAxODFhNC02OTNkLTRmYWMtYTMzMS03ODIzNzc4OTFmYzUiLCJhdWQiOiJ1c2VyIn0.rOqlCwf8DnDcN5Id7XujKBTAhPhzbPJbkHYKaPqRhrM",
 }
 pageIndex_max=1246
-payload = {"listSortType":0,"sortType":0,"pageSize":20,"pageIndex":3}
-response = requests.post(url,headers=headers,data=json.dumps(payload), timeout=10)
-print(response.url)
-print(response.status_code)
-print(response.text)
+for i in range(pageIndex_max):
+    payload = {"listSortType":0,"sortType":0,"pageSize":20,"pageIndex": i}
+    response = requests.post(url,headers=headers,data=json.dumps(payload), timeout=10)
+    # print(response.url)
+    # print(response.status_code)
+    print(response.text)
