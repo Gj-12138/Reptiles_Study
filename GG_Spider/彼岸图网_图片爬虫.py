@@ -1,7 +1,6 @@
 import re
 
-import requests
-
+from curl_cffi import requests
 
 # url = "https://pic.netbian.com/new/"
 # headers = {
@@ -38,28 +37,13 @@ import requests
 #
 
 
-url_img = f"https://pic.netbian.com/uploads/allimg/251027/201942-17615675826e8e.jpg"
-img_headers = {
-    "authority": "pic.netbian.com",
-"method": "GET",
-"path": "/uploads/allimg/251027/201942-17615675826e8e.jpg",
-"scheme": "https",
-"cache-control": "no-cache",
-    "referer":"https://pic.netbian.com/tupian/40176.html",
-"sec-ch-ua": '"Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"',
-"sec-ch-ua-platform": '"Windows"',
-"sec-ch-ua-mobile": "?0",
-    'sec-fetch-site': 'same-origin',
-    'sec-fetch-mode': 'navigate',
-    "sec-fetch-user":"?1",
-    'sec-fetch-dest': 'document',
-    'if-modified-since': 'Wed, 29 Oct 2025 12:58:31 GMT',
-    'if-none-match':"68ff635f-47aae",
-    "user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
-}
-
-img_response = requests.get(url_img, headers=img_headers,verify=True,allow_redirects=False)
-print(img_response.status_code)
-print(img_response.content)
-
-# RcGFvecookieclassrecord=%2C66%2C
+# url_img = f"https://pic.netbian.com/uploads/allimg/251027/201942-17615675826e8e.jpg"
+# img_headers = {
+#     "referer":"https://pic.netbian.com/tupian/40176.html",
+#     "user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+# }
+#
+# img_response = requests.get(url_img, headers=img_headers,verify=True,allow_redirects=False)
+# print(img_response.content)
+# with open("201942img.jpg","wb") as f:
+#     f.write(img_response.content)
