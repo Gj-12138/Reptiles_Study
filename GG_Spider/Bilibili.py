@@ -50,26 +50,9 @@ import requests
 # https://api.bilibili.com/x/web-interface/wbi/index/top/feed/rcmd?web_location=1430650&y_num=3&fresh_type=4&feed_version=V8&fresh_idx_1h=2&fetch_row=7&fresh_idx=2&brush=2&device=win&homepage_ver=1&ps=12&last_y_num=4&screen=553-1151&seo_info=&tt_exp=&last_showlist=av_n_115218420078806,av_n_115411693605590,av_n_115348527385280,ad_n_5614,av_115432547748940,av_115433957101358,av_n_115371478617226,av_n_115422783348102,av_n_115353510217938,av_n_115431171955346%3Bad_5637_115378407607880,av_115197012410461,live_n_25340848,av_115450734188614,av_115440550481122,av_n_115429594960949,av_n_115455717147994,av_n_115434527457873,av_n_115302641769685,av_n_115394245369767,av_n_115307339324917,av_n_115417699982876&uniq_id=1294405494391&w_rid=9a2358077daaee2a50dc5950d7909c4d&wts=1761790594
 url = """
 https://api.bilibili.com/x/web-interface/wbi/index/top/feed/rcmd?web_location=1430650
-&fresh_idx_1h=2
-
-&brush=2
-
+&fresh_idx=2
 &ps=30
-
 """
-# &y_num=3
-# &fresh_type=4
-# &feed_version=V8
-# &fresh_idx_1h=2
-# &fetch_row=7
-# &fresh_idx=2
-# &device=win
-# &homepage_ver=1
-# &last_y_num=4
-# &screen=553-1151
-# &uniq_id=1294405494391
-# &w_rid=9a2358077daaee2a50dc5950d7909c4d
-# &wts=1761790594
 headers = {
     "user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 Edg/141.0.0.0"
 }
